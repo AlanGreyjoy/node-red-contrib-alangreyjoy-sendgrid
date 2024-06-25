@@ -1,3 +1,5 @@
+![alt text](https://github.com/AlanGreyjoy/node-red-contrib-alangreyjoy-sendgrid/blob/master/screenshot.png?raw=true)
+
 # node-red-contrib-alangreyjoy-sendgrid
 
 This a simple node-red node to send emails using the SendGrid API. It's a fork of the original node-red-contrib-sendgrid node, but with some improvements.
