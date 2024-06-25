@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  RED.nodes.registerType('sendgridConfig', {
+    category: 'config',
+
+    defaults: {
+      apiKey: { value: '', required: true }
+    },
+
+    label: function () {
+      return 'SendGrid Config'
+    }
+  })
+</script>
+
+<script
+  type="text/html"
+  data-template-name="sendgridConfig"
+>
+  <div class="form-row">
+    <label for="node-config-input-apiKey"><i class="fa fa-book"></i> Api Key </label>
+    <input
+      type="text"
+      id="node-config-input-apiKey"
+    />
+  </div>
+</script>

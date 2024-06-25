@@ -17,9 +17,11 @@
     "prettier": "3.3.2"
   },
   "node-red": {
+    "version": ">=2.0.0",
     "nodes": {
-      "sendgrid": "node.js",
-      "sendgrid-trigger": "sendgrid-transactional.js"
+      "sendgrid-config": "nodes/sendgridConfig.js",
+      "sendgrid-send-basic-email": "nodes/sendgridSendBasicEmail.js",
+      "sendgrid-send-dynamic-template": "nodes/sendgridSendDynamicTemplate.js"
     }
   },
   "keywords": [

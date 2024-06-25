@@ -2,6 +2,7 @@ module.exports = function (RED) {
   function SendGridNode(config) {
     RED.nodes.createNode(this, config)
     var node = this
+
     node.on('input', function (msg) {
       this.status({ fill: 'green', shape: 'dot', text: 'sending' })
       const sgMail = require('@sendgrid/mail')
@@ -34,6 +35,7 @@ module.exports = function (RED) {
       this.status({})
     })
   }
+
   RED.nodes.registerType('sendgrid', SendGridNode, {
     credentials: {
       key: { type: 'password' }
