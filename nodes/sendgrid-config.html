@@ -1,21 +1,30 @@
 <script type="text/javascript">
-  RED.nodes.registerType('sendgridConfig', {
+  RED.nodes.registerType('sendgrid-config', {
     category: 'config',
 
     defaults: {
+      name: { value: '' },
       apiKey: { value: '', required: true }
     },
 
     label: function () {
-      return 'SendGrid Config'
+      return name || 'SendGrid Config'
     }
   })
 </script>
 
 <script
   type="text/html"
-  data-template-name="sendgridConfig"
+  data-template-name="sendgrid-config"
 >
+  <div class="form-row">
+    <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input
+      type="text"
+      id="node-config-input-name"
+    />
+  </div>
+
   <div class="form-row">
     <label for="node-config-input-apiKey"><i class="fa fa-book"></i> Api Key </label>
     <input

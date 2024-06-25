@@ -1,0 +1,71 @@
+<script type="text/javascript">
+  RED.nodes.registerType('sendgrid-basic-email', {
+    category: 'SendGrid',
+    color: '#ffffff',
+
+    defaults: {
+      sendgridConfig: { type: 'sendgrid-config', required: true },
+      name: { value: '' },
+      content: { value: 'text' }
+    },
+
+    inputs: 1,
+    outputs: 0,
+    align: 'left',
+    icon: 'sendgrid-icon.png',
+
+    paletteLabel: 'Basic email',
+
+    label: function () {
+      return this.name || 'Send an email'
+    }
+  })
+</script>
+
+<script
+  type="text/html"
+  data-template-name="sendgrid-basic-email"
+>
+  <div class="form-row">
+    <label for="node-input-sendgridConfig"><i class="fa fa-cog"></i> Configuration</label>
+    <input
+      type="node-config"
+      id="node-input-sendgridConfig"
+    />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input
+      type="text"
+      id="node-input-name"
+      placeholder="Name"
+    />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-to"><i class="icon-tag"></i> To</label>
+    <input
+      type="text"
+      id="node-input-to"
+      placeholder="youremail@ddress.com"
+    />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-from"><i class="icon-tag"></i> From</label>
+    <input
+      type="text"
+      id="node-input-from"
+      placeholder="example@example.com"
+    />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-content"><i class="fa fa-code"></i> Content Type</label>
+    <select id="node-input-content">
+      <option selected>text</option>
+      <option>html</option>
+    </select>
+  </div>
+</script>

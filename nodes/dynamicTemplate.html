@@ -1,0 +1,78 @@
+<script type="text/javascript">
+  RED.nodes.registerType('sendgrid-dynamic-template', {
+    category: 'SendGrid',
+    color: '#ffffff',
+
+    defaults: {
+      sendgridConfig: { type: 'sendgrid-config', required: true },
+      name: { value: '' },
+      templateId: { value: '' }
+    },
+
+    inputs: 1,
+    outputs: 0,
+    icon: 'sendgrid-icon.png',
+    align: 'left',
+
+    paletteLabel: 'Dynamic Email',
+
+    label: function () {
+      return this.name || 'Dynamic Template Email'
+    }
+  })
+</script>
+
+<script
+  type="text/html"
+  data-template-name="sendgrid-dynamic-template"
+>
+  <div class="form-row">
+    <label for="node-input-sendgridConfig"><i class="fa fa-cog"></i> Configuration</label>
+    <input
+      type="node-config"
+      id="node-input-sendgridConfig"
+    />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-templateid"><i class="icon-tag"></i> Template ID</label>
+    <input
+      type="text"
+      id="node-input-templateid"
+      placeholder="d-aa90asdf09afdja"
+    />
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+    <input
+      type="text"
+      id="node-input-name"
+      placeholder="Name"
+    />
+  </div>
+</script>
+
+<script
+  type="text/html"
+  data-help-name="sendgrid-dynamic-template"
+>
+  <p>Send an email using SendGrid Dynamic Template.</p>
+  <p>
+    You need to get API key from SendGrid website (<a
+      href="https://sendgrid.com"
+      target="_blank"
+      >https://sendgrid.com</a
+    >).
+  </p>
+  <p>Sends the <code>msg.payload</code> as an email.</p>
+  <p>Input message object properties:</p>
+  <ul>
+    <li><code>msg.payload.to</code> : recipient email address</li>
+    <li><code>msg.payload.from</code> : sender email address</li>
+    <li><code>msg.payload.subject</code> : email subject</li>
+    <li><code>msg.payload.name</code> : recipient name</li>
+    <li><code>msg.payload.content</code> : email content type (text or html)</li>
+    <li><code>msg.payload.text</code> : email text content (if content type is set to text)</li>
+    <li><code>msg.payload.html</code> : email html content (if content type is set to html)</li>
+  </ul>
+</script>
