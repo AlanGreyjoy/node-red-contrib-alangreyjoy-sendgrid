@@ -1,6 +1,6 @@
 {
-  "name": "node-red-contrib-eksido-sendgrid",
-  "version": "1.0.1",
+  "name": "node-red-contrib-alangreyjoy-sendgrid",
+  "version": "1.0.2",
   "description": "Sending e-mail node using SendGrid service",
   "main": "node.js",
   "scripts": {
@@ -8,10 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eksido/node-red-contrib-eksido-sendgrid.git"
+    "url": "https://github.com/AlanGreyjoy/node-red-contrib-alangreyjoy-sendgrid.git"
   },
   "dependencies": {
     "@sendgrid/mail": "*"
+  },
+  "devDependencies": {
+    "prettier": "3.3.2"
   },
   "node-red": {
     "nodes": {
@@ -26,10 +29,10 @@
     "email",
     "e-mail"
   ],
-  "author": "Franz Malten Buemann <fmb@eksido.com> (https://eksido.com)",
+  "author": "Alan Spurlock <alanspurlock@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eksido/node-red-contrib-eksido-sendgrid/issues"
+    "url": "https://github.com/AlanGreyjoy/node-red-contrib-alangreyjoy-sendgrid/issues"
   },
-  "homepage": "https://github.com/eksido/node-red-contrib-eksido-sendgrid#readme"
+  "homepage": "https://github.com/AlanGreyjoy/node-red-contrib-alangreyjoy-sendgrid#readme"
 }

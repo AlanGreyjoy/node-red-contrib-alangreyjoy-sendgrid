@@ -1,42 +1,47 @@
 <script type="text/javascript">
-    RED.nodes.registerType('sendgrid-transactional',{
-        category: 'Email',
-        color: '#ffffff',
-        defaults: {
-            from: {value:""},
-            to: {value:""},
-            name: {value:""},
-            templateid: {value:""}
-        },
-        credentials: {
-            key: {type:"password"},
-        },
-        inputs:1,
-        outputs:0,
-        icon: "envelope.png",
-        align: "right",
-        label: function() {
-            return this.name||"sendgrid-transactional";
-        }
-    });
+  RED.nodes.registerType('sendgrid-transactional', {
+    category: 'Email',
+    color: '#ffffff',
+    defaults: {
+      from: { value: '' },
+      to: { value: '' },
+      name: { value: '' },
+      templateid: { value: '' }
+    },
+    credentials: {
+      key: { type: 'password' }
+    },
+    inputs: 1,
+    outputs: 0,
+    icon: 'envelope.png',
+    align: 'right',
+    label: function () {
+      return this.name || 'sendgrid-transactional'
+    }
+  })
 </script>
 
-<script type="text/x-red" data-template-name="sendgrid-transactional">
-    <div class="form-row">
-        <label for="node-input-key"><i class="icon-tag"></i> API Key</label>
-        <input type="password" id="node-input-key" placeholder="Paste API Key created in SendGrid settings">
-    </div>
-    <div class="form-row">
-        <label for="node-input-templateid"><i class="icon-tag"></i> templateid </label>
-        <input type="text" id="node-input-templateid" placeholder="fsdvgegvsbre-34-3453">
-    </div>
-    <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i>Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-    </div>
-
+<script
+  type="text/x-red"
+  data-template-name="sendgrid-transactional"
+>
+  <div class="form-row">
+      <label for="node-input-key"><i class="icon-tag"></i> API Key</label>
+      <input type="password" id="node-input-key" placeholder="Paste API Key created in SendGrid settings">
+  </div>
+  <div class="form-row">
+      <label for="node-input-templateid"><i class="icon-tag"></i> templateid </label>
+      <input type="text" id="node-input-templateid" placeholder="fsdvgegvsbre-34-3453">
+  </div>
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
 </script>
 
-<script type="text/x-red" data-help-name="sendgrid">
-Help text
+<script
+  type="text/x-red"
+  data-help-name="sendgrid"
+>
+  Help text
 </script>
