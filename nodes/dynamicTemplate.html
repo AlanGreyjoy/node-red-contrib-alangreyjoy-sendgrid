@@ -6,7 +6,7 @@
     defaults: {
       sendgridConfig: { type: 'sendgrid-config', required: true },
       name: { value: '' },
-      templateId: { value: '' }
+      templateId: { value: '', required: true }
     },
 
     inputs: 1,
@@ -35,10 +35,10 @@
   </div>
 
   <div class="form-row">
-    <label for="node-input-templateid"><i class="icon-tag"></i> Template ID</label>
+    <label for="node-input-templateId"><i class="icon-tag"></i> Template ID</label>
     <input
       type="text"
-      id="node-input-templateid"
+      id="node-input-templateId"
       placeholder="d-aa90asdf09afdja"
     />
   </div>

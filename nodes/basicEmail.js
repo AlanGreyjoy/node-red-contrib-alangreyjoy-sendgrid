@@ -3,7 +3,6 @@ module.exports = function (RED) {
     RED.nodes.createNode(this, config)
 
     this.sendgridConfig = RED.nodes.getNode(config.sendgridConfig)
-    console.log(this.sendgridConfig)
 
     const node = this
 

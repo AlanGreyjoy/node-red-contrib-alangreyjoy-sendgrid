@@ -20,10 +20,13 @@ module.exports = function (RED) {
       }
 
       var data = {
-        from: config.from || msg.payload.from,
         to: config.to || msg.payload.to,
+        from: config.from || msg.payload.from,
+        subject: config.subject || msg.payload.subject || '',
         templateId: config.templateId || msg.payload.templateId,
-        dynamic_template_data: msg.payload.data
+        dynamic_template_data: {
+          ...templateData
+        }
       }
 
       sgMail.send(data, function (err) {
